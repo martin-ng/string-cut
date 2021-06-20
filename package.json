@@ -1,0 +1,15 @@
+{
+  "name": "string-cut",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/martin-ng/string-cut.git",
+  "author": "Martin Ng <martinng1992@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
