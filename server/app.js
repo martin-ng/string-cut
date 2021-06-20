@@ -7,9 +7,7 @@ const app = express();
 app.use(morgan("dev"));
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("hello world");
-});
+app.use("/", routes);
 
 const PORT = 1337;
 

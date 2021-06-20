@@ -10,12 +10,12 @@ function cutString(inputStr, nthChar = 3) {
   if (inputStr.length < nthChar) {
     return `Your input needs to have at least ${nthChar} characters.`;
   }
-  let result = [];
+  let resultStr = [];
 
   for (let i = nthChar - 1; i < inputStr.length; i += nthChar) {
-    result.push(inputStr[i]);
+    resultStr.push(inputStr[i]);
   }
-  return result.join("");
+  return resultStr.join("");
 }
 
 module.exports = cutString;
