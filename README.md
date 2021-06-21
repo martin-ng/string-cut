@@ -24,7 +24,13 @@ Step by step guide to download repo and start the app.
 
 > yarn start
 
-5. Input a string into the frontend or perform a POST request externally!
+5. Input a string and hit the cut button!
+
+6. Alternatively, create a POST request with the following object to the API http://localhost:1337/test
+
+> {
+    "string_to_cut": "enter your string here"
+}
 
 ## cutString Function
 
