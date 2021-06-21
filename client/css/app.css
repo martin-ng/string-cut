@@ -7,7 +7,6 @@ body {
     width: 150px;
     background-color: white;
     border-radius: 5px;
-    border: none;
     padding: 15px 30px;
     text-decoration: none;
     margin: 4px 2px;
@@ -31,7 +30,7 @@ body {
     width: 80vmin;
     height: 80vmin;
     margin: 0 auto;
-    background-color: red;
+    /* background-color: red; */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -40,13 +39,18 @@ body {
 
 .input-button {
     display: flex;
-    /* align-items: center; */
     justify-content: space-between;
     flex-direction: column;
 }
 
 input {
     width: 300px;
-    height: 25px;
+    height: 50px;
+    font-size: 20px;
     border-radius: 5px;
+}
+
+.result-string {
+    padding: 25px;
+    margin: 25px;
 }

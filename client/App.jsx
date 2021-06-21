@@ -5,29 +5,24 @@ import { Header } from "./components/index";
 import "./css/app.css";
 
 const App = () => {
-  const [userString, setUserString] = useState("Please enter your string here");
-  const [slicedString, setSlicedString] = useState("");
+  const [userString, setUserString] = useState("");
+  const [slicedString, setSlicedString] = useState(
+    "Your sliced string will be shown here"
+  );
 
   const handleChange = (event) => {
     setUserString(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-  };
-
   const submitUserInput = async () => {
-    const data = axios.post("/test", {
-      string_to_cut: userString,
-    });
-    console.log("data", data);
-    console.log("hi");
-  };
-
-  // const submitUserInput = async () => {};
-
-  const check = () => {
-    console.log(userString);
+    try {
+      const { data } = await axios.post("/test", {
+        string_to_cut: userString,
+      });
+      setSlicedString(data["return_string"]);
+    } catch (error) {
+      console.log("error", error);
+    }
   };
 
   return (
@@ -35,16 +30,19 @@ const App = () => {
       <Header />
       <div className="container">
         <div>
-          <h3>{slicedString}</h3>
+          <h2 className="result-string">{slicedString}</h2>
         </div>
 
         <div>
-          <input value={userString} onChange={handleChange}></input>
+          <input
+            placeholder="Please enter your string here"
+            onChange={handleChange}
+          ></input>
         </div>
         <div>
-          <button className="btn">Cut!</button>
-          <button onClick={() => submitUserInput()}>Cut string!</button>
-          <button onClick={check}>check</button>
+          <button className="btn" onClick={submitUserInput}>
+            Cut!
+          </button>
         </div>
       </div>
     </div>
