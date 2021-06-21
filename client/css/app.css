@@ -44,3 +44,9 @@ body {
     justify-content: space-between;
     flex-direction: column;
 }
+
+input {
+    width: 300px;
+    height: 25px;
+    border-radius: 5px;
+}
