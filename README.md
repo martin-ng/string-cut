@@ -24,6 +24,10 @@ Step by step guide to download repo and start the app.
 
 > yarn start
 
+5. Visit http://localhost:1337/ to use the web app
+
+> http://localhost:1337/
+
 5. Input a string and hit the cut button!
 
 6. Alternatively, create a POST request with the following object to the API http://localhost:1337/test
