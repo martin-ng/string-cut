@@ -4,6 +4,14 @@
 
 String cut is a web application with a frontend that accepts a user input or POST request to the route "/test" with a "string_to_cut" argument. The application returns a response with a JSON object containing a key "return_string" and a string containing every third letter from the original string.
 
+Web app is deployed to the following link:
+
+https://cutstring.herokuapp.com/
+
+POST requests can be made to the following endpoint:
+
+https://cutstring.herokuapp.com/test
+
 ## Instructions
 
 Step by step guide to download repo and start the app.
